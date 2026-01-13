@@ -2,7 +2,7 @@
 
 This repository provides AikyaNova Lab’s standardized Quality Control (QC) test firmware for ESP32 development boards. These tests are used internally by AikyaNova Labs during hardware validation and incoming quality control (IQC), and are also shared with customers so they can independently verify the ESP32 hardware they receive.
 
-The QC process is divided into Phase One (Physical) and Phase Two (Functional/Firmware).
+The QC process is divided into **Phase One** (Physical) and **Phase Two** (Functional/Firmware).
 
 ## What is an ESP32? 
 
@@ -14,7 +14,7 @@ The ESP32 is a highly integrated, low-cost system-on-chip (SoC) developed by Esp
 The ESP32 DevKit is a development and evaluation board built around the ESP32 SoC. It exposes the ESP32’s GPIOs, power rails, and communication interfaces through standard headers, enabling rapid prototyping, firmware development and hardware validation.
 AikyaNova Labs uses ESP32 DevKit boards as the reference platform for QC testing, ensuring consistent and repeatable results across batches.
 
-### ESP32 Technical Specifications
+### <ins>ESP32 Technical Specifications</ins>
 
   **Processor & Architecture**
   - Dual-core 32-bit Xtensa LX6
@@ -57,9 +57,10 @@ AikyaNova Labs follows a repeatable and customer-verifiable QC process to ensure
 Incoming QC (IQC) verifies physical condition, connectors, power integrity, and basic electrical behavior.
 Functional QC validates firmware upload, USB-serial communication, GPIO operation, Wi-Fi, and Bluetooth functionality using standardized test firmware.
 
-- Phase 1: Physical and Power Checks
-- Phase 2: Functional & Connectivity Checks
-  To run the firmware tests (Phase 2), you must set up your software environment. We recommend the Arduino IDE due to its ease of use.
+- **Phase 1:** Physical and Power Checks
+- **Phase 2:** Functional & Connectivity Checks
+  
+To run the firmware tests (Phase 2), you must set up your software environment. We recommend the Arduino IDE due to its ease of use.
 
 ## Setting up the Arduino IDE
 
@@ -121,33 +122,30 @@ Record **PASS/FAIL**
 
 ## Troubleshooting Guide
 
-### Board Not Detected
+ Board Not Detected
   - Check USB cable (data cable required)
   - Verify correct COM/USB port selection
   - Install appropriate USB-to-UART driver (CP210x / CH340)
   - Try a different USB port or system
 
-### Upload Failures
+ Upload Failures
   - Ensure correct board is selected in Arduino IDE
   - Hold BOOT button (if present) during upload
   - Reduce upload speed if errors persist
   - Close other applications using the serial port
 
-### Wi-Fi / Bluetooth Failures
-
+Wi-Fi / Bluetooth Failures
   - Verify antenna is not damaged or obstructed
   - Avoid metal enclosures during testing
   - Ensure only one board is powered during RF tests
   - Check serial logs for connection errors
 
-### Common ESP32 Pitfalls
-
+Common ESP32 Pitfalls
   - Insufficient USB power causing brownouts
   - Using restricted GPIOs unintentionally
   - Expecting stable Wi-Fi performance in noisy RF environments
 
 ## Safety and Handling
-
   - Do not exceed recommended voltage levels
   - Avoid hot-plugging external peripherals
   - Use reliable USB power sources
