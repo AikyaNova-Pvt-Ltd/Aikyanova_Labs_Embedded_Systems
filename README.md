@@ -16,23 +16,23 @@ AikyaNova Labs uses ESP32 DevKit boards as the reference platform for QC testing
 
 ### ESP32 Technical Specifications
 
-  Processor & Architecture
+  **Processor & Architecture**
   - Dual-core 32-bit Xtensa LX6
   - Clock frequency up to 240 MHz
   - Harvard architecture with hardware accelerators
 
-  Memory
+  **Memory**
   - ROM: 448 KB (dedicated for bootloader and firmware operation) 
   - SRAM: 520 KB (for instruction execution and runtime data)
   - Flash: External SPI flash (typically 4 MB on DevKit boards)
 
-  Wireless Specifications
+  **Wireless Specifications**
 
   - Wi-Fi: 2.4 GHz, IEEE 802.11 b/g/n
   - Bluetooth: Classic Bluetooth + Bluetooth Low Energy (BLE)
   - Integrated PCB or external antenna support (board dependent)
 
-  Power Requirements
+  **Power Requirements**
 
   - Input Power:
       + 5V via USB Type-C connector
@@ -41,7 +41,7 @@ AikyaNova Labs uses ESP32 DevKit boards as the reference platform for QC testing
   - Current on I/O Pins: 40 mA
   - Peak current during Wi-Fi transmission can exceed 500 mA
 
-  Operating Conditions
+  **Operating Conditions**
 
   - Operating temperature: –40°C to +85°C
   - Designed for continuous operation in embedded environments
@@ -52,32 +52,14 @@ AikyaNova Labs uses ESP32 DevKit boards as the reference platform for QC testing
 
 ## Quality Control (QC) Overview
 
+AikyaNova Labs follows a repeatable and customer-verifiable QC process to ensure ESP32 boards meet electrical, functional, and wireless performance expectations.
+
+Incoming QC (IQC) verifies physical condition, connectors, power integrity, and basic electrical behavior.
+Functional QC validates firmware upload, USB-serial communication, GPIO operation, Wi-Fi, and Bluetooth functionality using standardized test firmware.
+
 - Phase 1: Physical and Power Checks
 - Phase 2: Functional & Connectivity Checks
-
-## What's Included
-
-- `Blink_LED`: LED and basic GPIO checks.
-- `ESP32_QC_WIFI_AP`: Wi-Fi Access Point mode test.
-- `ESP32_QC_WIFI_STA`: Wi-Fi Station mode test.
-- `ESP32_QC_Bluetooth_Android`: Bluetooth validation by Android pairing.
-- `ESP32_QC_Bluetooth_IOS`: Bluetooth validation by iOS pairing.
-
-
-
-## QC Phases Overview
-  ### Phase 1: Physical and Power Checks
-  - Board condition and enclosure inspection
-  - USB port sturdiness & connectivity
-  - Power-on LED behavior
-  - GPIO pins validation
-  - Buttons click test
-
-  ### Phase 2: Functional & Connectivity Checks
-  - Wi-Fi (Access Point & Station mode)
-  - Bluetooth (Classic / BLE) testing using mobile devices
-
-  To run the firmware tests (Phase Two), you must set up your software environment. We recommend the Arduino IDE due to its ease of use.
+  To run the firmware tests (Phase 2), you must set up your software environment. We recommend the Arduino IDE due to its ease of use.
 
 ## Setting up the Arduino IDE
 
@@ -102,16 +84,74 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
    
 ## USB Driver Installation
 If your computer does not recognize the board (no COM port appears), you likely need to install the USB-to-UART bridge driver.
-- CP210x Driver: Download from Silicon Labs - https://www.silabs.com/software-and-tools/usb-to-uart-bridge-vcp-drivers (Common for DevKit V1/DOIT boards).
+- CP210x Driver: Download from [Silicon Labs](https://www.silabs.com/software-and-tools/usb-to-uart-bridge-vcp-drivers) (Common for DevKit V1/DOIT boards).
 Tip: If you are unsure which chip your board uses, look at the small square black chip near the USB port. The text on it will usually say CP2102 or CP2104.
 
+## Included Test Firmware
+
+- `Blink_LED`: LED and basic GPIO checks.
+- `ESP32_QC_WIFI_AP`: Wi-Fi Access Point mode test.
+- `ESP32_QC_WIFI_STA`: Wi-Fi Station mode test.
+- `ESP32_QC_Bluetooth_Android`: Bluetooth validation by Android pairing.
+- `ESP32_QC_Bluetooth_IOS`: Bluetooth validation by iOS pairing.
+
+## QC Phases
+
+  - Phase 1: Physical & Power Checks
+    + Board condition and enclosure inspection
+    + USB port sturdiness & connectivity
+    + Power-on validation
+    + GPIO pins check
+    + Buttons click test
+      
+  - Phase 2: Functional & Firmware Checks
+    + GPIO and USB-Serial Communication Validation (Blinking LED)
+    + Wi-Fi Testing (Access Point & Station mode)
+    + Bluetooth Testing (Classic/BLE testing using mobile devices)
+   
 ## QC Workflow
 
-1. Power-on and verify serial output.
-2. Run `Blink_LED` to validate GPIO and basic firmware loading.
-3. Run Wi-Fi AP/STA tests to verify radio and antenna performance.
-4. Run Bluetooth tests on both Android and iOS if applicable.
-5. Record pass/fail results per board.
+Recommended Test Sequence
+1. Power ON and verify USB-serial detection
+2. Upload and run Blink_LED firmware
+3. Execute Wi-Fi tests (AP → STA)
+4. Execute Bluetooth tests (Android / iOS as applicable)
+
+Record **PASS/FAIL**
+
+## Troubleshooting Guide
+
+### Board Not Detected
+  - Check USB cable (data cable required)
+  - Verify correct COM/USB port selection
+  - Install appropriate USB-to-UART driver (CP210x / CH340)
+  - Try a different USB port or system
+
+### Upload Failures
+  - Ensure correct board is selected in Arduino IDE
+  - Hold BOOT button (if present) during upload
+  - Reduce upload speed if errors persist
+  - Close other applications using the serial port
+
+### Wi-Fi / Bluetooth Failures
+
+  - Verify antenna is not damaged or obstructed
+  - Avoid metal enclosures during testing
+  - Ensure only one board is powered during RF tests
+  - Check serial logs for connection errors
+
+### Common ESP32 Pitfalls
+
+  - Insufficient USB power causing brownouts
+  - Using restricted GPIOs unintentionally
+  - Expecting stable Wi-Fi performance in noisy RF environments
+
+## Safety and Handling
+
+  - Do not exceed recommended voltage levels
+  - Avoid hot-plugging external peripherals
+  - Use reliable USB power sources
+  - Avoid repeated force on USB connector
 
 ## Notes
 
