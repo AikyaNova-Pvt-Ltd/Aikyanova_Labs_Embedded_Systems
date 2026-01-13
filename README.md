@@ -1,21 +1,23 @@
 # AikyaNova Labs Embedded Systems - ESP32 QC Testing
 
-This repository contains AikyaNova's internal quality control (QC) firmware used
-to validate ESP32-based boards during manufacturing. Each folder targets a
-specific QC test (LED, Wi-Fi AP/STA, Bluetooth, etc.). The goal is to provide
-repeatable bring-up checks for hardware verification.
+This repository provides AikyaNova Lab’s standardized Quality Control (QC) test firmware for ESP32 development boards. These tests are used internally by AikyaNova Labs during hardware validation and incoming quality control (IQC), and are also shared with customers so they can independently verify the ESP32 hardware they receive.
+
+The QC process is divided into Phase One (Physical) and Phase Two (Functional/Firmware).
 
 ## What's Included
 
-- `Blink_LED`: LED and basic GPIO sanity checks.
-- `ESP32_QC_WIFI_AP`: Wi-Fi Access Point mode tests.
-- `ESP32_QC_WIFI_STA`: Wi-Fi Station mode tests.
-- `ESP32_QC_Bluetooth_Android`: Bluetooth validation for Android pairing.
-- `ESP32_QC_Bluetooth_IOS`: Bluetooth validation for iOS pairing.
+- `ESP32_QC_USB_Serial_Check`: USB-to-Serial communication test.
+- `Blink_LED`: LED and basic GPIO checks.
+- `ESP32_QC_WIFI_AP`: Wi-Fi Access Point mode test.
+- `ESP32_QC_WIFI_STA`: Wi-Fi Station mode test.
+- `ESP32_QC_Bluetooth_Android`: Bluetooth validation by Android pairing.
+- `ESP32_QC_Bluetooth_IOS`: Bluetooth validation by iOS pairing.
+
+## 
 
 ## Prerequisites
 
-- ESP-IDF installed and configured.
+- Arduino IDE installed and configured.
 - USB drivers for your ESP32 board.
 - A supported ESP32 development board connected via USB.
 
