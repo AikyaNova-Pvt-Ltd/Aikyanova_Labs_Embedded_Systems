@@ -36,16 +36,44 @@ This test validates the ESP32's ability to act as a standard Bluetooth Serial de
 * Open the **Serial Monitor** (Baud: 115200) to view debug logs.
 
 ### 2. Connect via App
+
+**Part A: Pair in Android Settings**
 1.  Open **Settings > Bluetooth** on your Android phone.
 2.  Scan for new devices. Look for a device named **`ESP32_QC_TEST`** (or similar).
 3.  **Pair** with the device.
-4.  Open the **Serial Bluetooth Terminal** app (by Kai Morich).
-5.  Tap the hamburger menu (three lines) ☰ > **Devices**.
-6.  Select **`ESP32_LED_CONTROL`**.
-7.  The terminal window will open displaying **Connecting to ESP32_LED_Control ...**
-8.  Status should change to **"Connected"**.
-9.  Type `1` in the app's text bar and hit send to turn ON the LED.
-10.  Type `0` to turn OFF the LED.
+
+<p align="left">
+  <img src="Images/Android_pair_new_device.png" width="300" alt="Pairing in Android Settings">
+</p>
+
+**Part B: Connect in App**
+1.  Open the **Serial Bluetooth Terminal** app.
+2.  Tap the hamburger menu (three lines) ☰ > **Devices**.
+3.  Select **`ESP32_LED_CONTROL`**.
+
+<p align="left">
+  <img src="Images/Android_2.png" width="250" alt="App Menu">
+  &nbsp; &nbsp; 
+  <img src="Images/Android Terminal_3.png" width="250" alt="Select Device">
+</p>
+
+**Part C: Run the Test**
+1.  The terminal window will open displaying **Connecting to ESP32_LED_Control ...**
+2.  Status should change to **"Connected"**.
+3.  Type `1` in the app's text bar and hit send to turn ON the LED.
+4.  Type `0` to turn OFF the LED.
+
+<p align="center">
+  <img src="Images/Android Terminal_4.png" width="300" alt="Sending 1">
+  &nbsp; &nbsp; &nbsp; &nbsp;
+  <img src="Images/LED ON" width="300" alt="LED ON">
+</p>
+
+<p align="center">
+  <img src="Images/Android Terminal_5.png" width="300" alt="Sending 0">
+  &nbsp; &nbsp; &nbsp; &nbsp;
+  <img src="Images/LED OFF" width="300" alt="LED OFF">
+</p>
 
 ---
 
@@ -87,6 +115,7 @@ The board passes the Bluetooth QC check if:
 * **"Connection Failed" on Android:** Ensure you unpair the device in Android Settings and re-pair it before opening the app.
 * **Device not found on iOS:** Ensure you are using the *iOS/BLE* firmware. The Android firmware (Classic Bluetooth) will **not** show up on an iPhone.
 * **Brownout / Reset:** If the board restarts when you try to connect, the USB port may not be supplying enough current. Try a different USB port or cable.
+
 
 
 
