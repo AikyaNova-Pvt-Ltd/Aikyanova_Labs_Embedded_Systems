@@ -18,9 +18,9 @@ Before starting, please install the appropriate application for your testing dev
 | **iOS** | **LightBlue®** | Punch Through | Tests Bluetooth Low Energy (BLE) |
 
 <p align="center">
-  <img src="Android Play Store.png" width="250" alt="Android App: Serial Bluetooth Terminal">
+  <img src="Android Play Store.png" width="300" alt="Android App: Serial Bluetooth Terminal">
   &nbsp; &nbsp; &nbsp; &nbsp;
-  <img src="iOS App Store.PNG" width="250" alt="iOS App: LightBlue">
+  <img src="iOS App Store.PNG" width="300" alt="iOS App: LightBlue">
 </p>
 
 ---
@@ -87,6 +87,7 @@ The board passes the Bluetooth QC check if:
 * **"Connection Failed" on Android:** Ensure you unpair the device in Android Settings and re-pair it before opening the app.
 * **Device not found on iOS:** Ensure you are using the *iOS/BLE* firmware. The Android firmware (Classic Bluetooth) will **not** show up on an iPhone.
 * **Brownout / Reset:** If the board restarts when you try to connect, the USB port may not be supplying enough current. Try a different USB port or cable.
+
 
 
 
