@@ -18,9 +18,9 @@ Before starting, please install the appropriate application for your testing dev
 | **iOS** | **LightBlue®** | Punch Through | Tests Bluetooth Low Energy (BLE) |
 
 <p align="center">
-  <img src="Android Play Store.png" width="300" alt="Android App: Serial Bluetooth Terminal">
+  <img src="Images/Android Play Store.png" width="250" alt="Android App: Serial Bluetooth Terminal">
   &nbsp; &nbsp; &nbsp; &nbsp;
-  <img src="iOS App Store.PNG" width="300" alt="iOS App: LightBlue">
+  <img src="Images/iOS App Store.PNG" width="250" alt="iOS App: LightBlue">
 </p>
 
 ---
@@ -42,19 +42,24 @@ This test validates the ESP32's ability to act as a standard Bluetooth Serial de
 2.  Scan for new devices. Look for a device named **`ESP32_QC_TEST`** (or similar).
 3.  **Pair** with the device.
 
-<p align="left">
-  <img src="Images/Android_pair_new_device.png" width="300" alt="Pairing in Android Settings">
+<p align="center">
+  <img src="Images/Android Pair New Device.png" width="250" alt="Pairing in Android Settings">
 </p>
 
 **Part B: Connect in App**
 1.  Open the **Serial Bluetooth Terminal** app.
+
+<p align="center">
+  <img src="Images/Android_1.png" width="250" alt="Pairing in Android Settings">
+</p>
+
 2.  Tap the hamburger menu (three lines) ☰ > **Devices**.
 3.  Select **`ESP32_LED_CONTROL`**.
 
-<p align="left">
+<p align="center">
   <img src="Images/Android_2.png" width="250" alt="App Menu">
   &nbsp; &nbsp; 
-  <img src="Images/Android Terminal_3.png" width="250" alt="Select Device">
+  <img src="Images/Android_3.png" width="250" alt="Select Device">
 </p>
 
 **Part C: Run the Test**
@@ -64,15 +69,15 @@ This test validates the ESP32's ability to act as a standard Bluetooth Serial de
 4.  Type `0` to turn OFF the LED.
 
 <p align="center">
-  <img src="Images/Android Terminal_4.png" width="300" alt="Sending 1">
+  <img src="Images/Android Terminal_4.png" width="250" alt="Sending 1">
   &nbsp; &nbsp; &nbsp; &nbsp;
-  <img src="Images/LED ON" width="300" alt="LED ON">
+  <img src="Images/LED ON" width="250" alt="LED ON">
 </p>
 
 <p align="center">
-  <img src="Images/Android Terminal_5.png" width="300" alt="Sending 0">
+  <img src="Images/Android Terminal_5.png" width="250" alt="Sending 0">
   &nbsp; &nbsp; &nbsp; &nbsp;
-  <img src="Images/LED OFF" width="300" alt="LED OFF">
+  <img src="Images/LED OFF" width="250" alt="LED OFF">
 </p>
 
 ---
@@ -115,6 +120,8 @@ The board passes the Bluetooth QC check if:
 * **"Connection Failed" on Android:** Ensure you unpair the device in Android Settings and re-pair it before opening the app.
 * **Device not found on iOS:** Ensure you are using the *iOS/BLE* firmware. The Android firmware (Classic Bluetooth) will **not** show up on an iPhone.
 * **Brownout / Reset:** If the board restarts when you try to connect, the USB port may not be supplying enough current. Try a different USB port or cable.
+
+
 
 
 
