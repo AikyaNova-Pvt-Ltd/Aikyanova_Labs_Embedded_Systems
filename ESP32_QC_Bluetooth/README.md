@@ -17,7 +17,7 @@ Before starting, please install the appropriate application for your testing dev
 | **Android** | **Serial Bluetooth Terminal** | Kai Morich | Tests Bluetooth Classic (Serial Port Profile) |
 | **iOS** | **LightBlue®** | Punch Through | Tests Bluetooth Low Energy (BLE) |
 
-![Required Bluetooth Apps for Android and iOS](image_1.png)
+<img src="Images/App.png" alt="Required Bluetooth Apps for Android and iOS" width="600">
 
 ---
 
@@ -70,7 +70,7 @@ Since iOS does not support standard Bluetooth Serial (SPP) without special MFi c
 
 ---
 
-## ✅ Pass Criteria
+## Pass Criteria
 
 The board passes the Bluetooth QC check if:
 1.  The device is discoverable by the phone.
@@ -78,11 +78,12 @@ The board passes the Bluetooth QC check if:
 3.  Data can be sent **from Phone to ESP32** successfully.
 4.  Data can be sent **from ESP32 to Phone** successfully.
 
-## ❌ Common Troubleshooting
+## Common Troubleshooting
 
 * **"Connection Failed" on Android:** Ensure you unpair the device in Android Settings and re-pair it before opening the app.
 * **Device not found on iOS:** Ensure you are using the *iOS/BLE* firmware. The Android firmware (Classic Bluetooth) will **not** show up on an iPhone.
 * **Brownout / Reset:** If the board restarts when you try to connect, the USB port may not be supplying enough current. Try a different USB port or cable.
+
 
 
 
