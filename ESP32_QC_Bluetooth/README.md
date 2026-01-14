@@ -96,12 +96,29 @@ Since iOS does not support standard Bluetooth Serial (SPP) without special MFi c
 2.  Pull down to refresh the scan list.
 3.  Look for a peripheral named **`ESP32_iPhone_Control`**.
 4.  Tap **Connect**.
-5.  Once connected, you will see a list of "Services" and "Characteristics".
-6.  Click on the > beside the UUID and the Characteristic window will open.
-7.  Ensure the value in the top right is `UTF-8 String`. You can change it selecting the current value and selecting the UTF-8 String.
-8.  **Write Test:** Tap "Write new value", enter `1` and tap Write. The LED turns ON.
-9.  **Write Test:** Tap "Write new value", enter `0` and tap Write. The LED turns OFF.
-10. **Read Test:** Check if the value updates on the screen when the ESP32 sends a notification.
+
+<p align="center">
+  <img src="Images/iOS_1.png" width="250" alt="LightBlue App">
+  &nbsp; &nbsp;
+  <img src="Images/iOS_2" width="250" alt="Connet with ESP32">
+</p>
+
+### 3. Verify Data Transfer
+
+1.  Once connected, you will see a list of "Services" and "Characteristics".
+2.  Click on the > beside the UUID and the Characteristic window will open.
+3.  Ensure the value in the top right is `UTF-8 String`. You can change it selecting the current value and selecting the UTF-8 String.
+4.  **Write Test:** Tap "Write new value", enter `1` and tap Write. The LED turns ON.
+5.  **Write Test:** Tap "Write new value", enter `0` and tap Write. The LED turns OFF.
+6. **Read Test:** Check if the value updates on the screen when the ESP32 sends a notification.
+
+<p align="center">
+  <img src="Images/iOS_3.png" width="250" alt="LightBlue App">
+  &nbsp; &nbsp;
+  <img src="Images/iOS_4" width="250" alt="Connet with ESP32">
+  &nbsp; &nbsp;
+  <img src="Images/iOS_5" width="250" alt="Connet with ESP32">
+</p>
 
 ---
 
@@ -118,6 +135,7 @@ The board passes the Bluetooth QC check if:
 * **"Connection Failed" on Android:** Ensure you unpair the device in Android Settings and re-pair it before opening the app.
 * **Device not found on iOS:** Ensure you are using the *iOS/BLE* firmware. The Android firmware (Classic Bluetooth) will **not** show up on an iPhone.
 * **Brownout / Reset:** If the board restarts when you try to connect, the USB port may not be supplying enough current. Try a different USB port or cable.
+
 
 
 
