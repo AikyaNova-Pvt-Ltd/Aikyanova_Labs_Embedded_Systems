@@ -48,15 +48,12 @@ This test validates the ESP32's ability to act as a standard Bluetooth Serial de
 
 **Part B: Connect in App**
 1.  Open the **Serial Bluetooth Terminal** app.
-
-<p align="center">
-  <img src="Images/Android_1.png" width="250" alt="Pairing in Android Settings">
-</p>
-
 2.  Tap the hamburger menu (three lines) ☰ > **Devices**.
 3.  Select **`ESP32_LED_CONTROL`**.
 
 <p align="center">
+  <img src="Images/Android_1.png" width="250" alt="Pairing in Android Settings">
+  &nbsp; &nbsp; 
   <img src="Images/Android_2.png" width="250" alt="App Menu">
   &nbsp; &nbsp; 
   <img src="Images/Android_3.png" width="250" alt="Select Device">
@@ -121,6 +118,7 @@ The board passes the Bluetooth QC check if:
 * **"Connection Failed" on Android:** Ensure you unpair the device in Android Settings and re-pair it before opening the app.
 * **Device not found on iOS:** Ensure you are using the *iOS/BLE* firmware. The Android firmware (Classic Bluetooth) will **not** show up on an iPhone.
 * **Brownout / Reset:** If the board restarts when you try to connect, the USB port may not be supplying enough current. Try a different USB port or cable.
+
 
 
 
