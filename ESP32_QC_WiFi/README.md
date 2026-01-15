@@ -5,6 +5,12 @@ This directory contains the firmware and instructions required to validate the W
 1.  **Access Point (AP) Mode:** The ESP32 creates its own Wi-Fi network.
 2.  **Station (STA) Mode:** The ESP32 connects to an existing Wi-Fi router.
 
+<p align="center">
+  <img src="Images/ESP32_AP.png" width="250" alt="Phone Wifi Settings">
+  &nbsp; &nbsp; &nbsp; &nbsp;
+  <img src="Images/ESP21_STA.png" width="250" alt="ESP32 Hotspot">
+</p>
+
 ---
 
 ## Test 1: Access Point (AP) Mode
@@ -111,6 +117,7 @@ The board passes the Wi-Fi QC check if:
     * Ensure your mobile data (4G/5G) is turned OFF. Some phones refuse to route local traffic if the Wi-Fi has no internet access.
 * **LED not blinking:**
     * Some boards use a different GPIO for the built-in LED. If GPIO 2 doesn't work, check your board's pinout.
+
 
 
 
