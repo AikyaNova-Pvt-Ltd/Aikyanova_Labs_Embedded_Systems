@@ -126,6 +126,11 @@ To run the firmware tests (Phase 2), you must set up your software environment. 
 </p>
 
    - Port: Go to Tools > Port and select the COM/USB port where ESP32 is connected
+
+<p align="center">
+  <img src="Images/IDE Port.png" width="600" alt="Port">
+</p>
+  
    - Upload Speed: 921600 (recommended) or 115200
    
 ## 🔌 USB Driver Installation
