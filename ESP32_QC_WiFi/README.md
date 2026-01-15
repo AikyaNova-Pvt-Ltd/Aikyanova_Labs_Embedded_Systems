@@ -36,13 +36,13 @@ This directory contains the firmware and instructions required to validate the W
 <p align="center">
   <img src="Images/WiFI_AP_1.png" width="250" alt="WiFi: STA Mode">
   &nbsp; &nbsp; &nbsp; &nbsp;
-  <img src="Images/LED ON.png" width="250" alt="WiFi: STA LED ON">
+  <img src="Images/LED ON.jpg" width="250" alt="WiFi: STA LED ON">
 </p>
 
 <p align="center">
   <img src="Images/WiFI_AP_2.png" width="250" alt="WiFi: STA Mode">
   &nbsp; &nbsp; &nbsp; &nbsp;
-  <img src="Images/LED OFF.png" width="250" alt="WiFi: STA LED OFF">
+  <img src="Images/LED OFF.jpg" width="250" alt="WiFi: STA LED OFF">
 </p>
 
 5.  **Pass Condition:** The blue LED on the board (GPIO 2) toggles ON/OFF instantly.
@@ -81,13 +81,13 @@ This directory contains the firmware and instructions required to validate the W
 <p align="center">
   <img src="Images/WiFI_STA_1.png" width="250" alt="WiFi: STA Mode">
   &nbsp; &nbsp; &nbsp; &nbsp;
-  <img src="Images/LED ON.png" width="250" alt="WiFi: STA LED ON">
+  <img src="Images/LED ON.jpg" width="250" alt="WiFi: STA LED ON">
 </p>
 
 <p align="center">
   <img src="Images/WiFI_STA_2.png" width="250" alt="WiFi: STA Mode">
   &nbsp; &nbsp; &nbsp; &nbsp;
-  <img src="Images/LED OFF.png" width="250" alt="WiFi: STA LED OFF">
+  <img src="Images/LED OFF.jpg" width="250" alt="WiFi: STA LED OFF">
 </p>
 
 5.  **Pass Condition:** The web page updates the status and the physical LED toggles.
@@ -111,5 +111,6 @@ The board passes the Wi-Fi QC check if:
     * Ensure your mobile data (4G/5G) is turned OFF. Some phones refuse to route local traffic if the Wi-Fi has no internet access.
 * **LED not blinking:**
     * Some boards use a different GPIO for the built-in LED. If GPIO 2 doesn't work, check your board's pinout.
+
 
 
