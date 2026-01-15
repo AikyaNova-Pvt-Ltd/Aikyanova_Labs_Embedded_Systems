@@ -21,8 +21,6 @@ This test validates:
 | :--- | :--- | :--- |
 | **On-board LED** | **GPIO 2** | Digital Output (Active HIGH) |
 
-*(Note: Some specific board variants might use GPIO 1 or 5. If GPIO 2 does not work, check your specific board's datasheet).*
-
 ---
 
 ## 🚀 How to Run
