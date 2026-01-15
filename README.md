@@ -52,7 +52,9 @@ AikyaNova Labs uses ESP32 DevKit boards as the reference platform for QC testing
 
 ## ESP32 DevKit Pinout
 
-
+<p align="center">
+  <img src="ESP32 Pinout Diagram.png" width="600" alt="ESP32 Components">
+</p>
 
 ## Quality Control (QC) Overview
 
