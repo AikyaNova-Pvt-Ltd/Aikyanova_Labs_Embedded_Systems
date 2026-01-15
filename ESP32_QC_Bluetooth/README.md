@@ -122,7 +122,7 @@ Since iOS does not support standard Bluetooth Serial (SPP) without special MFi c
 <p align="center">
   <img src="Images/iOS_6.png" width="250" alt="Sending 1">
   &nbsp; &nbsp; &nbsp; &nbsp;
-  <img src="Images/LED ON.jpg" width="250" alt="LED ON">
+  <img src="Images/LED ON_iOS.jpg" width="250" alt="LED ON">
 </p>
 
 5.  **Write Test:** Tap "Write new value", enter `0` and tap Write. The LED turns OFF.
@@ -130,7 +130,7 @@ Since iOS does not support standard Bluetooth Serial (SPP) without special MFi c
 <p align="center">
   <img src="Images/iOS_7.png" width="250" alt="Sending 1">
   &nbsp; &nbsp; &nbsp; &nbsp;
-  <img src="Images/LED ON.jpg" width="250" alt="LED ON">
+  <img src="Images/LED OFF_iOS.jpg" width="250" alt="LED ON">
 </p>
 
 6. **Read Test:** Check if the value updates on the screen when the ESP32 sends a notification.
@@ -149,6 +149,7 @@ The board passes the Bluetooth QC check if:
 * **"Connection Failed" on Android:** Ensure you unpair the device in Android Settings and re-pair it before opening the app.
 * **Device not found on iOS:** Ensure you are using the *iOS/BLE* firmware. The Android firmware (Classic Bluetooth) will **not** show up on an iPhone.
 * **Brownout / Reset:** If the board restarts when you try to connect, the USB port may not be supplying enough current. Try a different USB port or cable.
+
 
 
 
