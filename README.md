@@ -10,7 +10,7 @@ The QC process is divided into **Phase One** (Physical) and **Phase Two** (Funct
 The ESP32 is a highly integrated, low-cost system-on-chip (SoC) developed by Espressif Systems, combining a dual-core 32-bit microcontroller with built-in 2.4 GHz Wi-Fi and Bluetooth (Classic + BLE) connectivity. Clocked up to 240 MHz, it offers strong processing capability, flexible GPIO multiplexing and a rich set of peripherals including ADC, DAC, PWM, UART, SPI, I²C and CAN. Multiple low-power modes enable energy-efficient designs, while hardware security features such as secure boot, flash encryption and cryptographic acceleration make the ESP32 suitable for both prototyping and production-grade embedded and IoT applications.
 
 <p align="center">
-  <img src="ESP32_Components.png" width="300" alt="ESP32 Components">
+  <img src="ESP32.jpg" width="400" alt="ESP32 Components">
 </p>
 
 ## ESP32 DevKit Overview
