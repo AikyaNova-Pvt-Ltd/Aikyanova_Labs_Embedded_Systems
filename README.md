@@ -133,13 +133,13 @@ If your computer does not recognize the board (no COM port appears), you likely 
 - **CP210x Driver:** Download from [Silicon Labs](https://www.silabs.com/software-and-tools/usb-to-uart-bridge-vcp-drivers) (Common for DevKit V1/DOIT boards).
 
 <p align="center">
-  <img src="Images/CP210x Driver Installation.png" width="450" alt="CP210x">
+  <img src="Images/CP210x Driver Installation.png" width="600" alt="CP210x">
 </p>
 
 Tip: If you are unsure which chip your board uses, look at the small square black chip near the USB port. The text on it will usually say CP2102 or CP2104.
 
 <p align="center">
-  <img src="Images/CP 210x.png" width="300" alt="CP 210x">
+  <img src="Images/CP 210x.png" width="200" alt="CP 210x">
 </p>
 
 - Connect the ESP32 to your PC/Laptop by a USB Type C **Data** Cable.
