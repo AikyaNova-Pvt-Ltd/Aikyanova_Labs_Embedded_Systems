@@ -92,7 +92,7 @@ To run the firmware tests (Phase 2), you must set up your software environment. 
    - Download and install the latest Arduino IDE for your OS (Windows, macOS or Linux) from:
    `https://www.arduino.cc/en/software
    - Agree to the terms and conditions and install in the default loaction. Click on Finish to complete the installation process.
-   - Install the driver softwares.
+   - Install the driver softwares if asked by the system.
   
 <p align="center">
   <img src="Images/IDE Installation.png" width="600" alt="Installation">
@@ -110,7 +110,7 @@ To run the firmware tests (Phase 2), you must set up your software environment. 
 3. **Install ESP32 Board Support** 📦
    - Go to Tools > Board > Boards Manager.
    - Search for "esp32".
-   - Install the "esp32 by Espressif Systems" package
+   - Install the "esp32 by Espressif Systems" package Version: `2.0.17` as it the stable version.
   
 <p align="center">
   <img src="Images/IDE Board Manager.png" width="600" alt="Board Manager">
@@ -146,6 +146,22 @@ Tip: If you are unsure which chip your board uses, look at the small square blac
 <p align="center">
   <img src="Images/CP 210x.png" width="300" alt="CP 210x">
 </p>
+
+- Connect the ESP32 to your PC/Laptop by a USB Type C Data Cable.
+- Right click on the `Windows button` and go to `Device Manager > Ports`.
+
+<p align="center">
+  <img src="Images/Device Manager.png" width="600" alt="Device Manager">
+</p>
+
+- Select `CP2102 USB to UART Bridge Controller` > `Brower for drivers on your computer`, locate the driver file and click on `OK`.
+
+<p align="center">
+  <img src="Images/Browse Driver.png" width="600" alt="Driver File">
+</p>
+
+- Windows will update your drivers and you can see `Silicon Labs CP210x USB to UART Bridge (COMxx)` under `Ports (COM & LPT)`.
+- Now go to Arduini IDE, `Tools > Port > COMxx`.
 
 ## 📂 Included Test Firmware
 
