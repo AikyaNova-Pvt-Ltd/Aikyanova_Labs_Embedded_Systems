@@ -119,14 +119,16 @@ To run the firmware tests (Phase 2), you must set up your software environment. 
 </p>
     
 4. **Select Board & Port** 🔌
-   - Board: Go to Tools > Board > ESP Arduino/esp3 > ESP32 Dev Module
+   - Board: Go to `Tools > Board > ESP Arduino/esp3 > ESP32 Dev Module`.
      
 <p align="center">
   <img src="Images/IDE Tools.png" width="600" alt="Tools">
 </p>
 
-   - Port: Go to Tools > Port and select the COM/USB port where ESP32 is connected 
-   - Upload Speed: 921600 (recommended) or 115200
+   - Port: Go to `Tools > Port` and select the COM/USB port where ESP32 is connected.
+   - `Tools > Partition Scheme > Huge APP (3MB no OTA/1MB SPIFFS)`.
+   - `Tools > Erase All Flash Before Sketch Upload > Enable`.
+   - Upload Speed: `921600` (recommended) or `115200`.
    
 ## 🔌 USB Driver Installation
 If your computer does not recognize the board (no COM port appears), you likely need to install the USB-to-UART bridge driver.
