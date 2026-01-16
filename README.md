@@ -157,7 +157,7 @@ Tip: If you are unsure which chip your board uses, look at the small square blac
 - Select `CP2102 USB to UART Bridge Controller` > `Brower for drivers on your computer`, locate the driver file and click on `OK`.
 
 <p align="center">
-  <img src="Images/Browse Driver.png" width="600" alt="Driver File">
+  <img src="Images/Browse Manager.png" width="600" alt="Driver File">
 </p>
 
 - Windows will update your drivers and you can see `Silicon Labs CP210x USB to UART Bridge (COMxx)` under `Ports (COM & LPT)`.
