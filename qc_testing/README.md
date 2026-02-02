@@ -91,7 +91,7 @@ To run the firmware tests (Phase 2), you must set up your software environment. 
 1. **Install Arduino IDE** 📥
    - Download and install the latest Arduino IDE for your OS (Windows, macOS or Linux) from:
    `https://www.arduino.cc/en/software
-   - Agree to the terms and conditions and install in the default loaction. Click on Finish to complete the installation process.
+   - Agree to the terms and conditions and install in the default loaction (change the location if necessary). Click on Finish to complete the installation process.
    - Install the driver softwares if asked by the system.
   
 <p align="center">
