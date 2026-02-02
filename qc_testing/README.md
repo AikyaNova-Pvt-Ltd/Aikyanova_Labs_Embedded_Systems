@@ -147,7 +147,7 @@ Tip: If you are unsure which chip your board uses, look at the small square blac
 </p>
 
 - Connect the ESP32 to your PC/Laptop by a USB Type C **Data** Cable.
-- Right click on the `Windows button` and go to `Device Manager > Ports`.
+- Right click on the `Windows button` and go to `Device Manager > Ports/Other Devices`.
 
 <p align="center">
   <img src="Images/Device Manager.png" width="250" alt="Device Manager">
