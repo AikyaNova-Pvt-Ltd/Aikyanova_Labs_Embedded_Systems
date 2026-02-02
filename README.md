@@ -24,7 +24,7 @@ Below is the current structure of the repository. This layout is designed to kee
 ```text
 AikyaNova_Labs_Embedded_Systems/
 ├── qc_testing/                     # QC Firmware & Setup Guides
-│   ├── Blink_LED/                  # Basic "Hello World" GPIO Test
+│   ├── Blink_LED/                  # Basic GPIO Test by Blinking On-board LED
 │   ├── ESP32_QC_Bluetooth/         # Bluetooth Classic (Android) & BLE (iOS) Tests
 │   ├── ESP32_QC_WiFi/              # Wi-Fi AP & Station Mode Tests
 │   ├── Images/                     # Documentation Images
