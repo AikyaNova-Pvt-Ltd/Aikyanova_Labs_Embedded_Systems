@@ -31,7 +31,7 @@ AikyaNova_Labs_Embedded_Systems/
 │   └── README.md                   # Detailed Setup & Testing Instructions
 ├── .gitignore                      # Git ignore file
 └── README.md                       # This file
-
+```
 ## Clone the Repository
 
 ```bash
