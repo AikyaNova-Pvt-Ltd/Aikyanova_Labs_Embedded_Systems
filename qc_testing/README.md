@@ -120,6 +120,7 @@ To run the firmware tests (Phase 2), you must set up your software environment. 
     
 4. **Select Board & Port** 🔌
    - Board: Go to `Tools > Board > ESP Arduino/esp3 > ESP32 Dev Module`.
+   Note: Make sure your ESP32 is connected to your computer during this step; otherwise, the `Ports` option will not be visible in the `Device Manager`, and the COM port to which your ESP32 is connected will not appear.
      
 <p align="center">
   <img src="Images/IDE Tools.png" width="400" alt="Tools">
