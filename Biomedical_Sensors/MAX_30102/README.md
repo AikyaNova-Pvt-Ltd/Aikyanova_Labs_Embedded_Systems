@@ -1,30 +1,37 @@
 # 🔴 AikyaNova Labs Embedded Systems - MAX30102 Sensor QC Testing
 
-This directory contains the Quality Control (QC) firmware and demonstration codes for testing the MAX30102 Pulse Oximeter and Heart-Rate Sensor using the ESP32 development board.
+This directory contains the demonstration codes for testing the MAX30102 Pulse Oximeter and Heart-Rate Sensor using the ESP32 development board.
 
-These scripts are designed for hardware validation, educational purposes, and developing advanced biomedical algorithms including photoplethysmography (PPG) waveform visualization, Heart Rate (BPM) calculation, and Blood Oxygen Saturation (SpO2) estimation.
+These scripts are designed for hardware validation, educational purposes, and developing advanced biomedical algorithms including photoplethysmography (PPG) waveform visualization, Heart Rate (BPM) calculation and Blood Oxygen Saturation (SpO2) estimation.
 
 ## ❓ What is the MAX30102 Sensor? 
 
 ### 🧠 Overview
-The MAX30102 is an integrated pulse oximetry and heart-rate monitor biosensor module. It includes internal LEDs (Red and Infrared), photodetectors, optical elements, and low-noise electronics with ambient light rejection. It operates via an I2C interface, making it easy to connect to microcontrollers like the ESP32.
+The MAX30102 is an integrated pulse oximetry and heart-rate monitor biosensor module. It includes internal LEDs (Red and Infrared), photodetectors, optical elements and low-noise electronics with ambient light rejection. It operates via an I2C interface, making it easy to connect to microcontrollers like the ESP32.
 
 ### <ins>📊 MAX30102 Technical Specifications</ins>
 - **Communication:** I2C Bus (Default speed up to 400kHz)
-- **Sensing Elements:** Red and Infrared (IR) LEDs
+- **Sensing Elements:** Red (660 nm) and Infrared (880 nm) LEDs
 - **Measurement Metrics:** Heart Rate (BPM) and Blood Oxygen Saturation (SpO2)
-- **Operating Voltage:** 3.3V (Typically supplied via VIN)
+- **Operating Voltage:** 3.3V to 5.5V (Typically supplied via VIN)
+- **Current Draw:** ~600μA (during measurements)
+                    ~0.7μA (during standby mode)
+- **Temperature Range:** -40˚C to +85˚C
 
 ## 📍 MAX30102 Pinout (ESP32 Reference)
 
+<p align="center">
+  <img src="Images/Max30102_Pinout.png" width="400" alt="Pinout Diagram">
+</p>
+
 Ensure the following connections are made for proper I2C communication:
 
-| MAX30102 Pin | ESP32 DevKit Pin | Function / Notes |
-| :--- | :--- | :--- |
-| **VIN** | 3.3V | Power supply |
-| **GND** | GND | Ground |
-| **SDA** | GPIO 21 | I2C Data |
-| **SCL** | GPIO 22 | I2C Clock |
+| MAX30102 Pin | ESP32 DevKit Pin | Arduino Pin | Function |
+| :--- | :--- | :--- | :--- |
+| **VIN** | 3.3V | 3.3V | Power supply |
+| **GND** | GND | GND | Ground |
+| **SDA** | GPIO 21 | A5 | I2C Data |
+| **SCL** | GPIO 22 | A4 | I2C Clock |
 
 ## ⚙️ Software Dependencies
 
@@ -67,3 +74,4 @@ This folder contains a progressive series of scripts, from basic hardware valida
 ## 📜 Brand and License
 
 All materials are under the AikyaNova™ brand and are licensed for non-commercial use only. See `LICENSE` for details.
+
