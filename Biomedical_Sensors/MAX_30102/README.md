@@ -11,7 +11,7 @@ The MAX30102 is an integrated pulse oximetry and heart-rate monitor biosensor mo
 ### 🧠 Hardware Overview
 
 <p align="center">
-  <img src="Images/Max30102_Module.png" width="400" alt="MAX30102 Biosensor Module">
+  <img src="Images/Max30102_Module.png" width="600" alt="MAX30102 Biosensor Module">
 </p>
 
 At the core of this module is the MAX30102 IC (an Analog Devices / Maxim Integrated component). Serving as a robust upgrade to the older MAX30100, this sensor is engineered specifically for precise photoplethysmography (PPG). It is commonly found in commercial smartwatches and fitness trackers due to its compact footprint and high reliability.
@@ -34,7 +34,7 @@ While it is not designed to measure human body temperature, it allows our algori
 ### 📈 Understanding the Artery Signal Graph
 
 <p align="center">
-  <img src="Images/Max30102_Artery_Signal_Graph.png" width="400" alt="Pinout Diagram">
+  <img src="Images/Max30102_Artery_Signal_Graph.png" width="600" alt="Graph">
 </p>
 
 The waveform image above demonstrates the photoplethysmogram (PPG) output.
@@ -113,6 +113,7 @@ This folder contains a progressive series of scripts, from basic hardware valida
 ## 📜 Brand and License
 
 All materials are under the AikyaNova™ brand and are licensed for non-commercial use only. See `LICENSE` for details.
+
 
 
 
