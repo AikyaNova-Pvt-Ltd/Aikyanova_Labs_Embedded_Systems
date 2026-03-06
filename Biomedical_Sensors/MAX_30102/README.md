@@ -34,7 +34,7 @@ While it is not designed to measure human body temperature, it allows our algori
 ### 📈 Understanding the Artery Signal Graph
 
 <p align="center">
-  <img src="Images/Max30102_Artery_Signal_Graph.png" width="600" alt="Graph">
+  <img src="Images/Max30102_Artery_Signal_Graph.png" width="525" alt="Graph">
 </p>
 
 The waveform image above demonstrates the photoplethysmogram (PPG) output.
@@ -113,6 +113,7 @@ This folder contains a progressive series of scripts, from basic hardware valida
 ## 📜 Brand and License
 
 All materials are under the AikyaNova™ brand and are licensed for non-commercial use only. See `LICENSE` for details.
+
 
 
 
