@@ -15,7 +15,7 @@ AikyaNova Labs uses specific reference sensors for reliable health-data acquisit
 The MAX30102 is an integrated pulse oximetry and heart-rate monitor module. It includes internal LEDs (Red and IR), photodetectors, optical elements, and low-noise electronics with ambient light rejection. It communicates with the host microcontroller via a standard I²C compatible interface.
 
 <p align="center">
-  <img src="Images/MAX_30102.png" width="350" alt="MAX30102">
+  <img src="Images/MAX_30102.png" width="275" alt="MAX30102">
 </p>
 
 **Technical Specifications:**
