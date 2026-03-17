@@ -60,7 +60,7 @@ To get started with the firmware and validation tools, follow these steps:
 First, download this repository to your local machine using Git:
 
 ```bash
-git clone [https://github.com/AikyaNova-Pvt-Ltd/Aikynova_Labs_Embedded_Systems.git](https://github.com/AikyaNova-Pvt-Ltd/Aikynova_Labs_Embedded_Systems.git)
+git clone https://github.com/AikyaNova-Pvt-Ltd/Aikynova_Labs_Embedded_Systems.git
 ```
 
 Navigate into the cloned directory:
