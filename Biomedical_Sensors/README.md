@@ -15,7 +15,7 @@ AikyaNova Labs uses specific reference sensors for reliable health-data acquisit
 The MAX30102 is an integrated pulse oximetry and heart-rate monitor module. It includes internal LEDs (Red and IR), photodetectors, optical elements, and low-noise electronics with ambient light rejection. It communicates with the host microcontroller via a standard I²C compatible interface.
 
 <p align="center">
-  <img src="Images/MAX_30102.png" width="500" alt="MAX30102">
+  <img src="Images/MAX_30102.png" width="350" alt="MAX30102">
 </p>
 
 **Technical Specifications:**
@@ -27,7 +27,7 @@ The MAX30102 is an integrated pulse oximetry and heart-rate monitor module. It i
 The AD8232 is an integrated signal conditioning block for ECG and other biopotential measurement applications. It is designed to extract, amplify, and filter small biopotential signals in the presence of noisy conditions, producing an analog output that is easily read by an ADC.
 
 <p align="center">
-  <img src="Images/AD_8232.png" width="500" alt="AD8232">
+  <img src="Images/AD_8232.png" width="350" alt="AD8232">
 </p>
 
 **Technical Specifications:**
