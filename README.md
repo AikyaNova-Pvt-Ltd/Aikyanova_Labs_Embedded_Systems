@@ -5,8 +5,6 @@
 
 Welcome to the official repository for **AikyaNova Labs Embedded Systems**. This repository serves as a central hub for our firmware, hardware validation tools, and educational resources. 
 
-The modules in this repository are designed to support the validation of custom **AikyaNova ESP32 Dev Kits** and provide reference firmware for integrated products, including ESP32-S3 based table-top calendar displays and health-monitoring IoT devices.
-
 ---
 
 ## 🗂️ Core Modules
@@ -17,7 +15,7 @@ If you are just getting started or need to perform incoming quality control (IQC
 👉 **[Click here to go to the QC Testing Directory](./qc_testing)**
 
 ### 2. Biomedical Sensors
-This directory contains standardized firmware, example sketches, and documentation for integrating physiological sensors into your projects. It currently features reference code for I²C and Analog sensors (like the MAX30102 and AD8232) for tracking metrics like heart rate, SpO2, and ECG.
+This directory contains standardized firmware, example sketches, and documentation for integrating physiological sensors into your projects. It currently features reference code for Analog sensors (like the MAX30102 and AD8232) for tracking metrics like heart rate, SpO2, and ECG.
 
 👉 **[Click here to go to the Biomedical Sensors Directory](./Biomedical_Sensors)**
 
@@ -41,7 +39,32 @@ Below is the current structure of the repository. This layout is designed to kee
 
 ```text
 AikyaNova_Labs_Embedded_Systems/
-├── Biomedical_Sensors/             # Health data acquisition firmware (MAX30102, AD8232)
-├── qc_testing/                     # QC Firmware & Setup Guides (Wi-Fi, BLE, GPIO)
+├── Biomedical_Sensors/             # Health & Physiological Data Acquisition
+│   ├── AD_8232/                    # Single-Lead ECG Sensor Firmware
+│   ├── MAX_30102/                  # SpO2 & Heart Rate Sensor Firmware
+│   └── README.md                   # Sensor Setup & Wiring Guides
+├── qc_testing/                     # QC Firmware & Setup Guides
+│   ├── Blink_LED/                  # Basic GPIO Test
+│   ├── ESP32_QC_Bluetooth/         # Bluetooth & BLE Tests
+│   ├── ESP32_QC_WiFi/              # Wi-Fi AP & Station Tests
+│   ├── Images/                     # Documentation Images
+│   └── README.md                   # Detailed Setup & Testing Instructions
 ├── .gitignore                      # Git ignore file
 └── README.md                       # This file
+```
+## 🚀 Getting Started
+
+To get started with the firmware and validation tools, follow these steps:
+
+### 1. Clone the Repository
+First, download this repository to your local machine using Git:
+
+```bash
+git clone [https://github.com/AikyaNova-Pvt-Ltd/Aikynova_Labs_Embedded_Systems.git](https://github.com/AikyaNova-Pvt-Ltd/Aikynova_Labs_Embedded_Systems.git)
+```
+
+Navigate into the cloned directory:
+
+```bash
+cd Aikynova_Labs_Embedded_Systems
+```
