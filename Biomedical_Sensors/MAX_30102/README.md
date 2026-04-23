@@ -1,6 +1,10 @@
-# AikyaNova Labs Embedded Systems - MAX30102 Sensor QC Testing
+# AikyaNova Labs Embedded Systems - Pulse Oximeter Demo Board
 
-This directory contains the demonstration codes for testing the MAX30102 Pulse Oximeter and Heart-Rate Sensor using the ESP32 development board.
+<p align="center">
+  <img src="Images/Pulse Oximeter.png" width="525" alt="Pulse Oximeter Demo Board">
+</p>
+
+This directory contains the demonstration codes for testing the MAX30102 Pulse Oximeter and Heart-Rate Sensor using the ESP32 and other development boards.
 
 These scripts are designed for hardware validation, educational purposes, and developing advanced biomedical algorithms including photoplethysmography (PPG) waveform visualization, Heart Rate (BPM) calculation and Blood Oxygen Saturation (SpO2) estimation.
 
