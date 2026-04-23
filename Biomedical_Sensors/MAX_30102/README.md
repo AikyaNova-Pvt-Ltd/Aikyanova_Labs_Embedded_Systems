@@ -52,7 +52,7 @@ As your heart pumps blood (systole), the volume of blood in your finger's capill
 
 Our more advanced sketches (`Max3010x_BPM` and `Max3010x_SpO2`) take this exact waveform and apply mathematical algorithms — like dynamic thresholding and exponential moving averages — to automatically count those peaks and calculate your heart rate.
 
-## MAX30102 Pinout (ESP32 Reference)
+## MAX30102 Pinout
 
 <p align="center">
   <img src="Images/Max30102_Pinout.png" width="400" alt="Pinout Diagram">
@@ -102,7 +102,7 @@ This folder contains a progressive series of 5 sketches, from basic hardware val
 
 ---
 
-### `Blink_LED/0_Blink_LED.ino` — Hardware Validation
+### [`Blink_LED/0_Blink_LED.ino`](Blink_LED/0_Blink_LED.ino) — Hardware Validation
 **Purpose:** Sanity check to confirm the ESP32 board and USB connection are working before connecting any sensors.
 
 **What it does:**
