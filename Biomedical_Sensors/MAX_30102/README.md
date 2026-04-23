@@ -1,5 +1,10 @@
 # AikyaNova Labs Embedded Systems - Pulse Oximeter Demo Board
 
+![Platform](https://img.shields.io/badge/Platform-ESP32%20%7C%20Arduino-blue)
+![Language](https://img.shields.io/badge/Language-C%2B%2B-orange)
+![License](https://img.shields.io/badge/License-Non--Commercial-red)
+![Status](https://img.shields.io/badge/Status-Active_Development-brightgreen)
+
 <p align="center">
   <img src="Images/Pulse Oximeter.png" width="350" alt="Pulse Oximeter Demo Board">
 </p>
