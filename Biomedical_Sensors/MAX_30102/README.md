@@ -1,15 +1,17 @@
 # AikyaNova Labs Embedded Systems - Pulse Oximeter Demo Board
 
-![Platform](https://img.shields.io/badge/Platform-ESP32%20%7C%20Arduino-blue)
-![Language](https://img.shields.io/badge/Language-C%2B%2B-orange)
-![License](https://img.shields.io/badge/License-Non--Commercial-red)
-![Status](https://img.shields.io/badge/Status-Active_Development-brightgreen)
-
 <p align="center">
   <img src="Images/Pulse Oximeter.png" width="350" alt="Pulse Oximeter Demo Board">
 </p>
 
 This directory contains the demonstration codes for testing the MAX30102 Pulse Oximeter and Heart-Rate Sensor using the ESP32 and other development boards.
+
+### ✨ Key Features
+* **🩸 Real-time SpO2 & BPM:** Advanced algorithms for reliable heart rate and blood oxygen estimation.
+* **📈 Live Waveform Visualization:** See your actual heartbeat via the Arduino Serial Plotter.
+* **🧠 Auto-Calibrating LED Power:** Dynamic melanin compensation to accommodate diverse skin tones.
+* **⚡ Plug-and-Play I2C:** Native 3.3V logic perfectly matched for the ESP32.
+* **📺 OLED Integration:** Ready-to-use SSD1306 display routines for standalone operation.
 
 These scripts are designed for hardware validation, educational purposes, and developing advanced biomedical algorithms including photoplethysmography (PPG) waveform visualization, Heart Rate (BPM) calculation and Blood Oxygen Saturation (SpO2) estimation.
 
@@ -30,17 +32,17 @@ The sensor architecture integrates three main components:
 * **High-Sensitivity Photodetector:** Measures the amount of light reflected back after being absorbed by pulsating arterial blood.
 * **Advanced Signal Processing:** Built-in ambient light rejection and low-noise analog circuitry ensure clean, usable physiological data.
 
-### Power and Logic Management
+### ⚡ Power and Logic Management
 Internally, the bare MAX30102 IC requires two distinct voltage rails: 1.8V for its internal digital logic and 3.3V to drive the LEDs. Fortunately, this breakout module includes onboard voltage regulators, meaning you only need to supply a single power source (typically 3.3V from the ESP32) and the board handles the rest.
 
 The module is configured by default for **3.3V logic levels**, making it natively plug-and-play with microcontrollers like the ESP32 and Arduino. (Note: Some module variants include rear solder jumpers to switch down to 1.8V logic if required by specific low-voltage processors).
 
-### Integrated Temperature Compensation
+### 🌡️ Integrated Temperature Compensation
 Accurate SpO2 calculation is highly dependent on environmental stability, as the wavelength of the LEDs can drift with heat. To account for this, the MAX30102 features an integrated on-chip (die) temperature sensor.
 
 While it is not designed to measure human body temperature, it allows our algorithms to dynamically compensate for thermal variations in LED emission. This internal sensor is highly precise, maintaining an accuracy of **±1°C** across a harsh operating range of **-40°C to +85°C**.
 
-### Understanding the Artery Signal Graph
+### 🔎 Understanding the Artery Signal Graph
 
 <p align="center">
   <img src="Images/Max30102_Artery_Signal_Graph.png" width="525" alt="Graph">
@@ -83,7 +85,7 @@ The sketches also use a **0.96" SSD1306 OLED Display** connected on the same I2C
 
 > **I2C Address:** The OLED defaults to `0x3C`. Change `SCREEN_ADDRESS` in the sketch to `0x3D` if your module is not found.
 
-### MAX30102 Technical Specifications
+### 🛠 MAX30102 Technical Specifications
 - **Communication:** I2C Bus (Default speed up to 400kHz)
 - **Sensing Elements:** Red (660 nm) and Infrared (880 nm) LEDs
 - **Measurement Metrics:** Heart Rate (BPM) and Blood Oxygen Saturation (SpO2)
@@ -91,7 +93,7 @@ The sketches also use a **0.96" SSD1306 OLED Display** connected on the same I2C
 - **Current Draw:** ~600μA (during measurements), ~0.7μA (during standby mode)
 - **Temperature Range:** -40˚C to +85˚C
 
-## Software Dependencies
+## 💻 Software Dependencies
 
 To run these sketches, install the following libraries via the Arduino Library Manager (**Sketch > Include Library > Manage Libraries...**):
 
@@ -101,7 +103,7 @@ To run these sketches, install the following libraries via the Arduino Library M
 | Adafruit SSD1306 | `SSD1306` | OLED display driver |
 | Adafruit GFX Library | `Adafruit GFX` | Core graphics (dependency of SSD1306) |
 
-## Included Test Firmware
+## ⚙️ Included Test Firmware
 
 This folder contains a progressive series of 5 sketches, from basic hardware validation to full biometric calculation.
 
@@ -116,6 +118,10 @@ This folder contains a progressive series of 5 sketches, from basic hardware val
 - Blinks it ON for 1 second and OFF for 1 second indefinitely.
 
 **How to use:** Upload the sketch. The onboard LED should blink at 0.5 Hz. No libraries or wiring required.
+
+<p align="center">
+  <img src="Images/ESP32_LED_BLINK.png" width="400" alt="ESP32 onboard LED Blinking">
+</p>
 
 ---
 
@@ -136,6 +142,11 @@ IR=124530  RED=98214
 IR=124602  RED=98270
 ```
 
+**Serial Plotter output:**
+<p align="center">
+  <img src="Images/Code_1_Output" width="400" alt="Code_1 serial plotter window">
+</p>
+
 **What to observe:** IR values typically range from 50,000–250,000 with a finger placed. RED values are lower in amplitude. A small beat-to-beat variation in both values confirms the sensor is detecting pulsatile blood flow.
 
 ---
@@ -152,6 +163,10 @@ IR=124602  RED=98270
 - If the finger is removed (IR < 15,000), outputs `0` to keep the Serial Plotter flat, scrolls the OLED prompt, flushes stale FIFO samples, and re-seeds the DC baseline on re-placement.
 
 **Serial Plotter output (115200 baud):** Single AC waveform trace, zero-centred, with each heartbeat appearing as an upward peak.
+
+<p align="center">
+  <img src="Images/Code_2_Output" width="400" alt="Code_2 serial plotter window">
+</p>
 
 **What to observe:** A clean, repeating waveform with consistent peak heights. The Serial Plotter's 500-point window covers exactly 5 seconds at 100 Hz, showing 5–6 heartbeat cycles at a resting rate of 60–70 BPM.
 
@@ -181,9 +196,10 @@ IR=124602  RED=98270
 **OLED Display:** Shows `BPM:` label and the live BPM value (large, centre-aligned). A blinking heart icon (13×11px, visible for 150ms per beat) confirms each detected heartbeat. Shows `LOW SIGNAL / Adjust finger` when envelope is below the quality gate.
 
 **Serial Plotter output (115200 baud, 3 traces):**
-```
-Signal:<AC_value>, Threshold:<dynamic_threshold>, BeatMarker:<envelope_on_beat|0>
-```
+
+<p align="center">
+  <img src="Images/Code_1_Output" width="400" alt="Code_1 serial plotter window">
+</p>
 
 ---
 
@@ -215,14 +231,16 @@ Executed on every confirmed heartbeat (from beat 2 onward):
 **OLED Display:** Side-by-side layout: `BPM` (left) and `SpO2` (right) with a percentage symbol, both at textSize 3. A blinking heart at the bottom-centre confirms each beat. Shows `LOW SIGNAL` and `--` appropriately when values are not yet valid.
 
 **Serial Plotter output (115200 baud, 5 traces):**
-```
-IR_Signal:<AC/8>, Threshold:<thresh>, Beat:<env_on_beat|0>, BPM:<bpm/2>, SpO2:<spo2/2>
-```
+
+<p align="center">
+  <img src="Images/Code_1_Output" width="400" alt="Code_1 serial plotter window">
+</p>
+
 > BPM and SpO2 are halved (`/2`) so they fit on the same vertical axis as the waveform without dominating the scale.
 
 ---
 
-## Troubleshooting Guide
+## ℹ️ Troubleshooting Guide
 
 **"MAX30102 not found" / "SSD1306 allocation failed" Error**
 - Check your wiring. Ensure SDA is on GPIO 21 and SCL is on GPIO 22 (ESP32).
@@ -241,11 +259,12 @@ IR_Signal:<AC/8>, Threshold:<thresh>, Beat:<env_on_beat|0>, BPM:<bpm/2>, SpO2:<s
 - SpO2 requires both IR and Red channels to have sufficient AC amplitude (at least 1 ADC count peak-to-peak after filtering). Ensure the Red LED power is sufficient — the `redPower` auto-brightness loop in `Max3010x_SpO2.ino` handles this, but it may need a few seconds to settle on dark skin.
 - SpO2 uses a 10-second stale timeout; allow at least 3–4 stable beats before a value is displayed.
 
-## Safety and Handling
+## ⚠️ Safety and Handling
 
-- **NOT FOR MEDICAL DIAGNOSIS:** These sketches and the MAX30102 module are developed for hardware validation and educational purposes only. They are not FDA-approved medical devices.
+> **NOT FOR MEDICAL DIAGNOSIS**
+> These sketches and the MAX30102 module are developed for hardware validation and educational purposes within the AikyaNova Labs ecosystem. They are **not** FDA-approved medical devices and should not be used to diagnose or treat any medical conditions.
 
-## Notes
+## 📖 Notes
 
 - These tests are designed for hardware validation and algorithm development within the AikyaNova Labs ecosystem.
 - The SparkFun MAX30105 library is fully compatible with the MAX30102 sensor — search for `MAX30105` in the Arduino Library Manager.
