@@ -102,7 +102,7 @@ This folder contains a progressive series of 5 sketches, from basic hardware val
 
 ---
 
-👉 ### [`Blink_LED`](Blink_LED/0_Blink_LED.ino) — Hardware Validation
+👉 **[`Blink_LED`](Blink_LED/0_Blink_LED.ino) — Hardware Validation**
 **Purpose:** Sanity check to confirm the ESP32 board and USB connection are working before connecting any sensors.
 
 **What it does:**
@@ -113,7 +113,7 @@ This folder contains a progressive series of 5 sketches, from basic hardware val
 
 ---
 
-👉 ### [`Max3010x_Raw_Values`](Max3010x_Raw_Values/Max3010x_Raw_Values.ino) — Sensor Communication Test (Sketch 1 of 4)
+👉 **[`Max3010x_Raw_Values`](Max3010x_Raw_Values/Max3010x_Raw_Values.ino) — Sensor Communication Test (Sketch 1 of 4)**
 **Purpose:** Verify that the MAX30102 and OLED display are both wired correctly and communicating over I2C.
 
 **What it does:**
@@ -133,7 +133,7 @@ IR=124602  RED=98270
 
 ---
 
-### [`Max3010x_Raw_Plot`](Max3010x_Raw_Plot/Max3010x_Raw_Plot.ino) — Waveform Visualization (Sketch 2 of 4)
+👉 **[`Max3010x_Raw_Plot`](Max3010x_Raw_Plot/Max3010x_Raw_Plot.ino) — Waveform Visualization (Sketch 2 of 4)**
 **Purpose:** Visualize the raw PPG heartbeat waveform on the Arduino Serial Plotter to verify signal quality before running the BPM or SpO2 algorithms.
 
 **What it does:**
@@ -149,7 +149,7 @@ IR=124602  RED=98270
 
 ---
 
-### [`Max3010x_BPM`](Max3010x_BPM/Max3010x_BPM.ino) — Heart Rate Extraction (Sketch 3 of 4)
+👉 **[`Max3010x_BPM`](Max3010x_BPM/Max3010x_BPM.ino) — Heart Rate Extraction (Sketch 3 of 4)**
 **Purpose:** Measure and display real-time heart rate (BPM) on the OLED display, with a Serial Plotter output for algorithm inspection.
 
 **What it does:**
@@ -178,7 +178,7 @@ Signal:<AC_value>, Threshold:<dynamic_threshold>, BeatMarker:<envelope_on_beat|0
 
 ---
 
-### [`Max3010x_SpO2`](Max3010x_SpO2/Max3010x_SpO2.ino) — Full Biometric Extraction (Sketch 4 of 4)
+👉 **[`Max3010x_SpO2`](Max3010x_SpO2/Max3010x_SpO2.ino) — Full Biometric Extraction (Sketch 4 of 4)**
 **Purpose:** Simultaneously measure and display Heart Rate (BPM) and Blood Oxygen Saturation (SpO2) on the OLED display.
 
 **What it does:**
