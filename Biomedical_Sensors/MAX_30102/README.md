@@ -120,7 +120,7 @@ This folder contains a progressive series of 5 sketches, from basic hardware val
 **How to use:** Upload the sketch. The onboard LED should blink at 0.5 Hz. No libraries or wiring required.
 
 <p align="center">
-  <img src="Images/ESP32_LED_BLINK.png" width="400" alt="ESP32 onboard LED Blinking">
+  <img src="Images/ESP32_LED_BLINK.jpg" width="400" alt="ESP32 onboard LED Blinking">
 </p>
 
 ---
