@@ -102,7 +102,7 @@ This folder contains a progressive series of 5 sketches, from basic hardware val
 
 ---
 
-### [`Blink_LED`](Blink_LED/0_Blink_LED.ino) — Hardware Validation
+👉 ### [`Blink_LED`](Blink_LED/0_Blink_LED.ino) — Hardware Validation
 **Purpose:** Sanity check to confirm the ESP32 board and USB connection are working before connecting any sensors.
 
 **What it does:**
@@ -113,7 +113,7 @@ This folder contains a progressive series of 5 sketches, from basic hardware val
 
 ---
 
-### [`Max3010x_Raw_Values`](Max3010x_Raw_Values/Max3010x_Raw_Values.ino) — Sensor Communication Test (Sketch 1 of 4)
+👉 ### [`Max3010x_Raw_Values`](Max3010x_Raw_Values/Max3010x_Raw_Values.ino) — Sensor Communication Test (Sketch 1 of 4)
 **Purpose:** Verify that the MAX30102 and OLED display are both wired correctly and communicating over I2C.
 
 **What it does:**
