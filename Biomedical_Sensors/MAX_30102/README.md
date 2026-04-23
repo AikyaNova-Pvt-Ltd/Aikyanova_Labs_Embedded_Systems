@@ -102,7 +102,7 @@ This folder contains a progressive series of 5 sketches, from basic hardware val
 
 ---
 
-### [`Blink_LED/0_Blink_LED.ino`](Blink_LED/0_Blink_LED.ino) — Hardware Validation
+### [`Blink_LED`](Blink_LED) — Hardware Validation
 **Purpose:** Sanity check to confirm the ESP32 board and USB connection are working before connecting any sensors.
 
 **What it does:**
