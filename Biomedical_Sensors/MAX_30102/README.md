@@ -165,7 +165,7 @@ No finger detected.
 
 **OLED Display Output:**
 <p align="center">
-  <img src="Images/Code_1_Display.png" width="450" alt="Code_1 serial plotter window">
+  <img src="Images/Code_1_Display.png" width="250" alt="Code_1 serial plotter window">
 </p>
 
 **What to observe:** IR values typically range from 50,000–250,000 with a finger placed. RED values are lower in amplitude. A small beat-to-beat variation in both values confirms the sensor is detecting pulsatile blood flow.
@@ -191,7 +191,7 @@ No finger detected.
 
 **OLED Display Output:**
 <p align="center">
-  <img src="Images/Code_2_Output.png" width="450" alt="Code_1 serial plotter window">
+  <img src="Images/Code_2_Display.png" width="250" alt="Code_1 serial plotter window">
 </p>
 
 **What to observe:** A clean, repeating waveform with consistent peak heights. The Serial Plotter's 500-point window covers exactly 5 seconds at 100 Hz, showing 5–6 heartbeat cycles at a resting rate of 60–70 BPM.
@@ -229,7 +229,7 @@ No finger detected.
 
 **OLED Display Output:**
 <p align="center">
-  <img src="Images/Code_3_Output.png" width="450" alt="Code_1 serial plotter window">
+  <img src="Images/Code_3_Display.png" width="250" alt="Code_1 serial plotter window">
 </p>
 
 ---
@@ -269,7 +269,7 @@ Executed on every confirmed heartbeat (from beat 2 onward):
 
 **OLED Display Output:**
 <p align="center">
-  <img src="Images/Code_4_Output.png" width="450" alt="Code_1 serial plotter window">
+  <img src="Images/Code_4_Display.png" width="250" alt="Code_1 serial plotter window">
 </p>
 
 ---
