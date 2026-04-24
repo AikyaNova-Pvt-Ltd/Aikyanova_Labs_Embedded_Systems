@@ -194,7 +194,7 @@ No finger detected.
   <img src="Images/Code_2_Display.png" width="200" alt="Code_1 serial plotter window">
 </p>
 
-**What to observe:** A clean, repeating waveform with consistent peak heights. The Serial Plotter's 500-point window covers exactly 5 seconds at 100 Hz, showing 5–6 heartbeat cycles at a resting rate of 60–70 BPM.
+**What to observe:** A clean, repeating waveform with consistent peak heights.
 
 ---
 
