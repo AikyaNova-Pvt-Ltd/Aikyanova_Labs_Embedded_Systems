@@ -19,7 +19,7 @@ These scripts are designed for hardware validation, educational purposes, and de
 
 The MAX30102 is an integrated pulse oximetry and heart-rate monitor biosensor module. It includes internal LEDs (Red and Infrared), photodetectors, optical elements and low-noise electronics with ambient light rejection. It operates via an I2C interface, making it easy to connect to microcontrollers like the ESP32.
 
-### [MAX30102 Datasheet:](https://www.analog.com/media/en/technical-documentation/data-sheets/max30102.pdf)
+### Click here for [MAX30102 Datasheet](https://www.analog.com/media/en/technical-documentation/data-sheets/max30102.pdf)
 
 ### Hardware Overview
 
