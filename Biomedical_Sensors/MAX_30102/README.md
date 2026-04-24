@@ -140,8 +140,21 @@ This folder contains a progressive series of 5 sketches, from basic hardware val
 
 **Serial Monitor output (115200 baud):**
 ```
-IR=124530  RED=98214
-IR=124602  RED=98270
+Initializing MAX30102...
+Sensor found!
+Setup done. Waiting for finger...
+Finger detected. Starting readings.
+IR=24418  RED=39052
+IR=68930  RED=93715
+IR=145588  RED=113633
+IR=175522  RED=119939
+IR=181158  RED=120143
+IR=182656  RED=120795
+IR=183598  RED=122456
+IR=184231  RED=124639
+IR=186118  RED=125891
+IR=188465  RED=123945
+No finger detected.
 ```
 
 **Serial Plotter output:**
