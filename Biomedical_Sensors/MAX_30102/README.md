@@ -8,10 +8,10 @@ This directory contains the demonstration codes for testing the MAX30102 Pulse O
 
 ### ✨ Key Features
 * **🩸 Real-time SpO2 & BPM:** Advanced algorithms for reliable heart rate and blood oxygen estimation.
-* **📈 Live Waveform Visualization:** See your actual heartbeat via the Arduino Serial Plotter.
+* **📈 Live Waveform Visualization:** See your actual heartbeat via the Arduino IDE Serial Plotter.
 * **🧠 Auto-Calibrating LED Power:** Dynamic melanin compensation to accommodate diverse skin tones.
-* **⚡ Plug-and-Play I2C:** Native 3.3V logic perfectly matched for the ESP32.
-* **📺 OLED Integration:** Ready-to-use SSD1306 display routines for standalone operation.
+* **⚡ Plug-and-Play I2C:** Native Vin logic (3.3V preferrable) perfectly matched for the ESP32 and other microcontrollers.
+* **📺 OLED Integration:** Ready-to-use 0.96" OLED (SSD1306) display routines for standalone operation.
 
 These scripts are designed for hardware validation, educational purposes, and developing advanced biomedical algorithms including photoplethysmography (PPG) waveform visualization, Heart Rate (BPM) calculation and Blood Oxygen Saturation (SpO2) estimation.
 
